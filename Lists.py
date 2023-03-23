@@ -47,5 +47,62 @@
 #         strings_containing_words.append(current_string)
 # print(all_strings)
 # print(strings_containing_words)
+# FIFTH
+# n = int(input())
+# positive_nums = []
+# negative_nums = []
+# even_nums = []
+# odd_nums = []
+# for _ in range(n):
+#     current_number = int(input())
+#     if current_number >= 0:
+#         positive_nums.append(current_number)
+#     else:
+#         negative_nums.append(current_number)
+#     if current_number % 2 == 0:
+#         even_nums.append(current_number)
+#     else:
+#         odd_nums.append(current_number)
+# command=input()
+#
+# if command == "even":
+#     print(even_nums)
+# elif command == "odd":
+#     print(odd_nums)
+# elif command == "positive":
+#     print(positive_nums)
+# else:
+#     print(negative_nums)
+
+# FIFTH 2.0
+# n = int(input())
+# all_numbers = []
+# filtered = []
+# for _ in range(n):
+#     current_number = int(input())
+#     all_numbers.append(current_number)
+#
+# command = input()
+#
+#
+# for element in all_numbers:
+#
+#     if command == "even":
+#         if element % 2 == 0:
+#             filtered.append(element)
+#     elif command == "odd":
+#         if element % 2 != 0:
+#             filtered.append(element)
+#     elif command == "positive":
+#         if element>=0:
+#             filtered.append(element)
+#     elif command == "negative":
+#         if element <0:
+#             filtered.append(element)
+# print(filtered)
+
+
+
+
 
 
