@@ -265,3 +265,47 @@
 #         final_deck.append(right_part[card_index])
 #     deck_of_cards = final_deck
 # print(final_deck)
+#
+#
+# collection_of_items = input().split('|')
+# budget = float(input())
+# items_to_sell_sum = []
+# og_buget = budget
+#
+# for item in collection_of_items:
+#     different_items = item.split("->")
+#     type_of_item = different_items[0]
+#     price_of_item = float(different_items[1])
+#     if price_of_item > budget:
+#         continue
+#     if type_of_item == 'Clothes':
+#         if price_of_item > 50:
+#             continue
+#         else:
+#             budget -= price_of_item
+#             items_to_sell_sum.append(price_of_item*1.4)
+#     elif type_of_item == 'Shoes':
+#         if price_of_item > 35.00:
+#             continue
+#         else:
+#             budget -= price_of_item
+#             items_to_sell_sum.append(price_of_item*1.4)
+#     elif type_of_item == 'Accessories':
+#         if price_of_item > 20.50:
+#             continue
+#         else:
+#             budget -= price_of_item
+#             items_to_sell_sum.append(price_of_item*1.4)
+#     print(f'{price_of_item*1.4:.2f}',end=" ")
+# print()
+# profit = sum(items_to_sell_sum) + budget - og_buget
+# new_budget = budget + sum(items_to_sell_sum)
+#
+# print(f"Profit: {profit:.2f}")
+# if new_budget >= 150:
+#     print("Hello, France!")
+# else:
+#     print("Not enough money.")
+
+
+
