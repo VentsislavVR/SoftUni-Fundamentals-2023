@@ -22,7 +22,7 @@
 #
 # grade = float(input())
 # grade_to_word(grade)
-#3rd
+# 3rd
 # def calculate(command, first_num, second_num):
 #     result = 0
 #     if command == "multiply":
@@ -42,10 +42,29 @@
 #
 # result = calculate(command_operator, num_1, num_2)
 # print(int(result))
+# 3rd
+# text = input()
+# n = int(input())
+#
+# repeat_as_lamda = lambda word,times:word*times
+# print(repeat_as_lamda(text,n))
+# 4th
 
-
-
-
-
-
-
+# def calculate_total_amount(product, quantity):
+#     total_amount = 0
+#
+#     if product == "water":
+#         total_amount = quantity * 1
+#     elif product == "coffee":
+#         total_amount = quantity * 1.50
+#     elif product == "coke":
+#         total_amount = quantity * 1.40
+#     elif product == "snacks":
+#         total_amount = quantity * 2.00
+#     return total_amount
+#
+#
+# product_to_buy = input()
+# requested_quantity = int(input())
+# result = calculate_total_amount(product_to_buy, requested_quantity)
+# print(f"{result:.2f}")
