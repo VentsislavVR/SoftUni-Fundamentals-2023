@@ -68,3 +68,28 @@
 # requested_quantity = int(input())
 # result = calculate_total_amount(product_to_buy, requested_quantity)
 # print(f"{result:.2f}")
+#6th
+# def rectangle_area(width,height):
+#     result = width * height
+#     return result
+#
+# a = int(input())
+# b= int(input())
+#
+# print(rectangle_area(a,b))
+#7th
+
+# nums = input().split()
+# res = []
+# for i in nums:
+#     res.append(round(float(i)))
+# print(res)
+
+def ro(nums):
+    res = []
+    for i in nums:
+        res.append(round(float(i)))
+    return res
+
+
+print(ro(input().split()))
