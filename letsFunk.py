@@ -84,12 +84,12 @@
 # for i in nums:
 #     res.append(round(float(i)))
 # print(res)
-#
+
 # def ro(nums):
 #     res = []
 #     for i in nums:
 #         res.append(round(float(i)))
 #     return res
 #
-#
-# print(ro(input().split()))
+# numbers = input().split()
+# print(ro(numbers))
