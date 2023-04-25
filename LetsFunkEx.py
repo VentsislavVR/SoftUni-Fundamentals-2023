@@ -57,5 +57,63 @@
 # number_as_string = input()
 # sum_of_odd_digits, sum_of_even_digits = even_and_odd_numbers(number_as_string)
 # print(f"Odd sum = {sum_of_odd_digits}, Even sum = {sum_of_even_digits}")
-#5th
+# 9th
 
+# def password_validation(some_password):
+#     pass_is_valid = True
+#     if len(some_password) < 6 or len(some_password) > 10:
+#         print("Password must be between 6 and 10 characters")
+#         pass_is_valid = False
+#     if not some_password.isalnum():
+#         print("Password must consist only of letters and digits")
+#         pass_is_valid = False
+#     digit_counter = 0
+#     for character in some_password:
+#         if character.isdigit():
+#             digit_counter += 1
+#     if digit_counter < 2:
+#         print("Password must have at least 2 digits")
+#         pass_is_valid = False
+#     return pass_is_valid
+#
+#
+# password = input()
+# password_is_valid = password_validation(password)
+# if password_is_valid:
+#     print("Password is valid")
+#10th
+# def is_perfect(some_number):
+#     sum = 0
+#     for divisor in range(1,some_number):
+#         if some_number % divisor == 0:
+#             sum += divisor
+#     if sum == some_number:
+#         return "We have a perfect number!"
+#     return "It's not so perfect."
+#
+#
+# number = int(input())
+# print(is_perfect(number))
+#12th
+# def factorial(number):
+#     for current_number in range(1,number):
+#         number *= current_number
+#     return number
+#
+#
+# first_number = int(input())
+# second_number = int(input())
+# first_number_factorial = factorial(first_number)
+# second_number_factorial = factorial(second_number)
+# final_result = first_number_factorial / second_number_factorial
+# print(f"{final_result:.2f}")
+#11thLoadingBar
+# def status(number):
+#     if number == 100:
+#         return "100% Complete!\n[%%%%%%%%%%]"
+#     return f"{number}% [{(number//10) * '%'}{(10 -(number//10)) * '.'}]""" \
+#            "\nStill loading..."
+#
+#
+# single_number = int(input())
+# print(status(single_number))
