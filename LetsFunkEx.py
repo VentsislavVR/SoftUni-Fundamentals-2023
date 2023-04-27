@@ -81,7 +81,7 @@
 # password_is_valid = password_validation(password)
 # if password_is_valid:
 #     print("Password is valid")
-#10th
+# 10th
 # def is_perfect(some_number):
 #     sum = 0
 #     for divisor in range(1,some_number):
@@ -94,7 +94,7 @@
 #
 # number = int(input())
 # print(is_perfect(number))
-#12th
+# 12th
 # def factorial(number):
 #     for current_number in range(1,number):
 #         number *= current_number
@@ -107,7 +107,7 @@
 # second_number_factorial = factorial(second_number)
 # final_result = first_number_factorial / second_number_factorial
 # print(f"{final_result:.2f}")
-#11thLoadingBar
+# 11thLoadingBar
 # def status(number):
 #     if number == 100:
 #         return "100% Complete!\n[%%%%%%%%%%]"
@@ -117,3 +117,73 @@
 #
 # single_number = int(input())
 # print(status(single_number))
+# 5th
+#
+# even_nums = input().split()
+#
+#
+# def myFunc(x):
+#     if int(x) % 2 == 0:
+#         return True
+#     else:
+#         return False
+#
+#
+# adults = filter(myFunc, even_nums)
+# even_result = []
+# for x in adults:
+#     even_result.append(int(x))
+# print(even_result)
+# 6th
+
+# def sorting_func(nums):
+#   sorted=[]
+#   for s in sorted_nums:
+#     sorted.append(s)
+#   return  sorted
+
+# def sorting_func(num):
+#     new_arangment = []
+#     for x in num:
+#         new_arangment.append(int(x))
+#         x = sorted(new_arangment)
+#     return x
+#
+#
+# sorted_nums = input().split()
+#
+# print(sorting_func(sorted_nums))
+
+# 7th
+
+#
+# numbers = input()
+# numbers_list = [int(num) for num in numbers.split()]
+#
+# minimum = min(numbers_list)
+# maximum = max(numbers_list)
+# total = sum(numbers_list)
+#
+# print(f"The minimum number is {minimum}")
+# print(f"The maximum number is {maximum}")
+# print(f"The sum number is: {total}")
+# 8th
+# def is_it(n):
+#     poli_list = []
+#
+#     for i in n:
+#         if i[0::] == i[::-1]:
+#             poli = True
+#             poli_list.append(poli)
+#         else:
+#             poli = False
+#             poli_list.append(poli)
+#
+#     return poli_list
+#
+#
+# nums = input().split(", ")
+#
+# result = is_it(nums)
+# for i in result:
+#     print(i)
