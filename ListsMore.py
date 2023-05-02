@@ -132,3 +132,8 @@
 # else:
 #     prime = False
 # print(prime)
+#6th
+
+
+
+
