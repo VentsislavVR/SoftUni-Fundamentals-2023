@@ -134,6 +134,91 @@
 # print(prime)
 #6th
 
+starting_list = input().split(" ")
+numbers_list = [int(num) for num in starting_list]
 
+command = input().split()
+while command[0] != "end":
+    manipulation = command[0]
+    if manipulation == "exchange":
+        index = int(command[1])
+        if index < 0 or index >= len(numbers_list):
+            print("Invalid index")
+        numbers_list = numbers_list[index + 1:] + numbers_list[:index + 1]
+    elif manipulation == "max":
+        max = float("-inf")
+        if command[1] == "odd":
+            for od in numbers_list:
+                if od % 2 !=0 and od > max:
+                    max = od
+            if max == float("-inf"):
+                print("No matches")
+            else:
+                print(numbers_list.index(max))
+        elif command[1] == "even":
+            for ev in numbers_list:
+                if ev % 2 ==0 and ev > max:
+                    max = ev
+            if max == float("-inf"):
+                print("No matches")
+            else:
+                print(numbers_list.index(max))
+    elif manipulation == "min":
+        min = float("inf")
+        if command[1] == "odd":
+            for od in numbers_list:
+                if od % 2 !=0 and od < min:
+                    min = od
+            if min == float("inf"):
+                print("No matches")
+            else:
+                print(numbers_list.index(min))
+        elif command[1] == "even":
+            for ev in numbers_list:
+                if ev % 2 ==0 and ev < min:
+                    min = ev
+            if min == float("inf"):
+                print("No matches")
+            else:
+                print(numbers_list.index(min))
+    elif manipulation == "first":
+        kount=[]
+        count = command[1]
+        if command[2] == "even":
+            for c in numbers_list:
+                if c % 2 == 0 and len(kount) <2:
+                    kount.append(c)
+            if int(count)>len(numbers_list):
+                print("Invalid count")
+            else:
+                print(kount)
+        elif command[2] == "odd":
+            for c in numbers_list:
+                if c % 2 != 0 and len(kount) <2:
+                    kount.append(c)
+            if int(count)>len(numbers_list):
+                print("Invalid count")
+            else:
+                print(kount)
+    elif manipulation == "last":
+        kount =[]
+        count = command[1]
+        if command[2] == "even":
+            for c in reversed(numbers_list):
+                if c % 2 == 0 and len(kount) <2:
+                    kount.append(c)
+            if int(count)>len(numbers_list):
+                print("Invalid count")
+            else:
+                print(kount)
+        elif command[2] == "odd":
+            for c in reversed(numbers_list):
+                if c % 2 != 0 and len(kount) <2:
+                    kount.append(c)
+            if int(count)>len(numbers_list):
+                print("Invalid count")
+            else:
+                print(kount)
 
-
+    command=input().split()
+print(numbers_list)
