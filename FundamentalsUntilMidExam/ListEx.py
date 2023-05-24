@@ -43,8 +43,8 @@
 #         should_terminate = True
 #         break
 # initial_player_count = 11
-# print(f"Team A - {initial_player_count-len(first_team_sent_off_players)};
-# Team B - {initial_player_count-len(second_team_sent_off_players)}")
+# print(f"Team A - {initial_player_count-len(first_team_sent_off_players)}")
+# print(f"Team B - {initial_player_count-len(second_team_sent_off_players)}")
 #
 # if should_terminate:
 #     print("Game was terminated")
@@ -306,5 +306,4 @@
 #     print("Hello, France!")
 # else:
 #     print("Not enough money.")
-
 
