@@ -33,7 +33,7 @@
 #
 # print(f"{centuries} centuries = {year} years = {days} days = {hour} hours = {minutes} minutes")
 
-n = int(input())
+# n = int(input())
 
 # for num in range(1,n+1):
 #     is_special=False

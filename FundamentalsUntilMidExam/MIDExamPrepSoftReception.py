@@ -8,6 +8,7 @@ answers_per_hour = first_employee_efficiency + second_employee_efficiency + thir
 
 students_left = students_cunt - answers_per_hour
 hours = 1
+break_count = 0
 while students_left >= 0:
     hours += 1
     if hours % 4 == 0:
