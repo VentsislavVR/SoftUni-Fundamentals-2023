@@ -1,6 +1,6 @@
 initial_loot = [x for x in input().split("|")]
 
-command = input()
+
 
 while True:
     command = input()
@@ -9,8 +9,8 @@ while True:
         break
     action = command.split()
     if action[0] == "Loot":
-        action.pop(0)
-        for i in action:
+        items = action[1:]
+        for i in items:
             if i not in initial_loot:
                 initial_loot.insert(0, i)
     if action[0] == "Drop":
@@ -24,9 +24,15 @@ while True:
         count = int(action[1])
         stolen_items = initial_loot[-count::]
         if count <= len(initial_loot):
-            print(" ".join(stolen_items))
+            print(", ".join(stolen_items))
+        for it in stolen_items:
+            if it in initial_loot:
+                initial_loot.remove(it)
 
-
-avg = sum(initial_loot) / len(initial_loot)
-
-print(f"Average treasure gain: {avg:.2f} pirate credits.")
+avg = 0
+for item in initial_loot:
+    avg += len(item) / len(initial_loot)
+if not initial_loot:
+    print("Failed treasure hunt.")
+else:
+    print(f"Average treasure gain: {avg:.2f} pirate credits.")
