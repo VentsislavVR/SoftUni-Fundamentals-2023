@@ -6,15 +6,15 @@ students_cunt = int(input())
 
 answers_per_hour = first_employee_efficiency + second_employee_efficiency + third_employee_efficiency
 
-students_left = students_cunt - answers_per_hour
-hours = 1
-break_count = 0
-while students_left >= 0:
+hours = 0
+total_time = 0
+while students_cunt > 0:
     hours += 1
+    total_time += 1
     if hours % 4 == 0:
         continue
-    students_left -= answers_per_hour
-    if students_left <= 0:
-        print(f"Time needed: {hours}h.")
-        break
+    students_cunt -= answers_per_hour
+
+print(f"Time needed: {hours}h.")
+
 
