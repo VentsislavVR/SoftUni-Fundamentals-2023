@@ -1,7 +1,5 @@
 initial_loot = [x for x in input().split("|")]
 
-
-
 while True:
     command = input()
 
@@ -29,10 +27,8 @@ while True:
             if it in initial_loot:
                 initial_loot.remove(it)
 
-avg = 0
-for item in initial_loot:
-    avg += len(item) / len(initial_loot)
 if not initial_loot:
     print("Failed treasure hunt.")
 else:
+    avg = sum(len(item) for item in initial_loot) / len(initial_loot)
     print(f"Average treasure gain: {avg:.2f} pirate credits.")
