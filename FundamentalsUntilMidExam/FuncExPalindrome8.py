@@ -3,7 +3,6 @@ def check_palindrome(some_number):
         return True
     return False
 
-
 numbers = input().split(", ")
 for number in numbers:
     print(check_palindrome(number))
