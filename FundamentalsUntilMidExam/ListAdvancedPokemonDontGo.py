@@ -1,29 +1,27 @@
-data = [int(x) for x in input().split()]
-removed_elements = 0
-while data:
-    indexes = int(input())
-    catch = data.pop(indexes)
-    if indexes < 0:
-        first_el = data.pop(0)
-        last_el = data[-1]
-        data.insert(0, last_el)
-    if len(data) > 1 or data[indexes] > data[-1]:
-        first_el = data[0]
-        last_el = data.pop(-1)
-        data.insert(first_el, -1)
-    for index,c in enumerate(data):
-        if c <= catch:
-            data[index] += catch
+sequence = [int(el) for el in input().split()]
+points = 0
+
+while len(sequence) != 0:
+    index = int(input())
+    num = 0
+    if 0 <= index < len(sequence):
+        num = sequence.pop(index)
+    elif 0 > index:
+        num_to_add = sequence[-1]
+        num = sequence[0]
+        sequence[0] = sequence[-1]
+    else:
+        num_to_add = sequence[0]
+        num = sequence[-1]
+        sequence[-1] = sequence[0]
+    points += num
+    for current_index, current_num in enumerate(sequence):
+        if current_num <= num:
+            sequence[current_index] += num
         else:
-            data[index] -= catch
-    # if indexes < 0:
-    #     first_el=data.pop(0)
-    #     last_el = data[-1]
-    #     data.insert(0,last_el)
-    # if data[indexes] > data[-1]:
-    #     first_el = data[0]
-    #     last_el = data.pop(-1)
-    #     data.insert(first_el,-1):
+            sequence[current_index] -= num
+
+print(points)
 
 
 

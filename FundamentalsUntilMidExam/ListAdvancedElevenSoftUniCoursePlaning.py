@@ -63,7 +63,7 @@ while len(command) > 1:
     if action == "Add":
         lesson = add_lesson(lessons, lesson_title)
     elif action == "Insert":
-        lesson = insert_lesson(lessons, lesson_title, int(lesson_tittle_or_index))
+        lesson = insert_lesson(lessons, lesson_title, lesson_tittle_or_index)
     elif action == "Remove":
         lesson = remove_lesson(lessons, lesson_title)
     elif action == "Swap":
