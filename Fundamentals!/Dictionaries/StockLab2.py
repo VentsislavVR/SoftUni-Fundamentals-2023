@@ -1,15 +1,15 @@
-products = {}
-data = input().split()
+bakery = {}
+items= input().split()
 
-for index in range(0, len(data), 2):
-    key = data[index]
-    value = data[index + 1]
-    products[key] = value
+for index in range(0, len(items), 2):
+    key = items[index]
+    value = items[index + 1]
+    bakery[key] = value
 
 searched_products = input().split()
 
-for searched_product in searched_products:
-    if searched_product in products.keys():
-        print(f"We have {products[searched_product]} of {searched_product} left")
+for product in searched_products:
+    if product in bakery.keys():
+        print(f"We have {bakery[product]} of {product} left")
     else:
-        print(f"Sorry, we don't have {searched_product}")
+        print(f"Sorry, we don't have {product}")
