@@ -77,6 +77,42 @@
 #         coins -= group_size * 3
 #
 # print(f"{group_size} companions received {floor(coins/group_size)} coins each.")
+#9th
 
 
+# number_of_snowballs = int(input())
+#
+# snow_balls = []
+#
+# for ball in range(number_of_snowballs):
+#     weight = int(input())
+#     velocity = int(input())
+#     quality = int(input())
+#     best = (weight / velocity) ** quality
+#     snow_balls.append([best,weight,velocity,quality])
+# result = sorted(snow_balls)
+#
+# print(f"{result[-1][1]} : {result[-1][2]} = {result[-1][0]:.0f} ({result[-1][-1]})")
+#10th
 
+# lost_fight_count = int(input())
+# helmet_price = float(input())
+# sword_price = float(input())
+# shield_price = float(input())
+# armor_price = float(input())
+# expenses = 0
+# shield_repair = 0
+# for lost_fight in range(1,lost_fight_count+1):
+#     if lost_fight % 2 == 0:
+#         expenses += helmet_price
+#     if lost_fight % 3 == 0:
+#         expenses += sword_price
+#     if lost_fight % 2 ==0 and lost_fight % 3 == 0:
+#         expenses += shield_price
+#         shield_repair += 1
+#         if shield_repair % 2 == 0:
+#             expenses += armor_price
+#
+#
+#
+# print(f"Gladiator expenses:{expenses:.2f} aureus")
