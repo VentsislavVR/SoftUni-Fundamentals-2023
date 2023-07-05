@@ -115,4 +115,4 @@
 #
 #
 #
-# print(f"Gladiator expenses:{expenses:.2f} aureus")
+# print(f"Gladiator expenses: {expenses:.2f} aureus")
