@@ -1,24 +1,39 @@
-number_of_items_to_buy = int(input())
+quantity = int(input())
+days = int(input())
 
-days_until_christmas = int(input())
+ornament_set = 2
+tree_skirt = 5
+tree_garlands = 3
+tree_lights = 15
+
 christmas_spirit = 0
-money_spent = 0
-for i in range(1,days_until_christmas+1):
-    if i % 2 == 0:
-        money_spent +=2  * number_of_items_to_buy
-        christmas_spirit += 5
-    if i % 3 == 0:
-        money_spent += 8 * number_of_items_to_buy
-        christmas_spirit += 13
-    if i % 5 ==0:
-        money_spent +=15 * number_of_items_to_buy
-        christmas_spirit +=17
-    if i == days_until_christmas:
+budget = 0
+
+for day in range(1, days + 1):
+    if day % 11 == 0:
+        quantity += 2
+
+    if day % 10 == 0:
         christmas_spirit -= 20
-        money_spent+= 23 * number_of_items_to_buy
-    if i % 11==0:
-        number_of_items_to_buy +=2
+        budget += tree_skirt + tree_lights + tree_garlands
 
+        if day == days:
+            christmas_spirit -= 30
 
-print(f"Total cost: {money_spent}")
+    if day % 5 == 0:
+        christmas_spirit += 17
+        budget += tree_lights * quantity
+
+    if day % 15 == 0:
+        christmas_spirit += 30 # fifth day with garlands
+
+    if day % 3 == 0:
+        christmas_spirit += 13
+        budget += (tree_garlands + tree_skirt) * quantity
+
+    if day % 2 == 0:
+        christmas_spirit += 5
+        budget += ornament_set * quantity
+
+print(f"Total cost: {budget}")
 print(f"Total spirit: {christmas_spirit}")
