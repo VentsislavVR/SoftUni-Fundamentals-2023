@@ -1,14 +1,15 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 data = input().upper()
 final_rage_quit = ""
+current = ""
 for index in range(len(data)):
+    current += final_rage_quit
     if data[index].isdigit():
-        if len(final_rage_quit) < 1:
-            final_rage_quit = data[index-1] * int(data[index])
-        else:
-            final_rage_quit = data[:index] *int(data[index])
+        current *= int(data[index])
+
     else:
-        final_rage_quit += data[index]
+        final_rage_quit += current
+        current = ""
 
 
 
