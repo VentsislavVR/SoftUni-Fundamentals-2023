@@ -1,6 +1,6 @@
 def move_letters_to_back(string, n):
     if n >= len(string):
-        return string  # No change needed if n is greater than or equal to string length
+        return string
     return string[n:] + string[:n]
 
 
