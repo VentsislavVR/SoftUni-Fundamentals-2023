@@ -5,7 +5,8 @@ while True:
     line = input()
     if line == "end of shift":
         break
-    pattern = r"%(?P<name>[A-Z][a-z]+)%<(?P<item>\w+)>\|(?P<count>\d+)\|(?P<price>\d+\.\d+)\$"
+    pattern = r"%(?P<name>[A-Z][a-z]+)%[^\.\$\%\|]*?" \
+              r"<(?P<item>\w+)>[^\.\%\$\|]*?\|(?P<count>\d+)\|[^\.\%\$\|]*?(?P<price>\d+\.?\d*)\$"
     match = re.match(pattern,line)
     if not match:
         continue
