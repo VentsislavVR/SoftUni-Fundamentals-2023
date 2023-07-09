@@ -5,7 +5,7 @@ def rev_func(text, string):
         error_flag = True
         return text, error_flag
     else:
-        text = text.replace(string, "")
+        text = text.replace(string, "",1)
         string = string[::-1]
         text += string
     return text, error_flag
