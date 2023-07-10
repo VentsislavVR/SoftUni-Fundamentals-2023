@@ -8,9 +8,9 @@ def contains_func(raw, string):
 
 def flipper_func(raw_keys, command, start, end):
     if command == "Upper":
-        raw_keys = raw_keys[:start_idx] + raw_keys[start_idx:end_idx].upper() + raw_keys[end_idx:]
+        raw_keys = raw_keys[:start] + raw_keys[start:end].upper() + raw_keys[end:]
     elif command == "Lower":
-        raw_keys = raw_keys[:start_idx] + raw_keys[start_idx:end_idx].lower() + raw_keys[end_idx:]
+        raw_keys = raw_keys[:start] + raw_keys[start:end].lower() + raw_keys[end:]
     return raw_keys
 
 
@@ -37,10 +37,10 @@ while True:
         upper_lower = commands[1]
         start_idx = int(commands[2])
         end_idx = int(commands[3])
-        raw_keys = flipper_func(raw_keys, upper_lower, start_idx, end_idx)
+        raw_keys=flipper_func(raw_keys, upper_lower, start_idx, end_idx)
         print(raw_keys)
     elif commands[0] == "Slice":
         start_idx = int(commands[1])
         end_idx = int(commands[2])
-        raw_keys= slice_func(raw_keys, start_idx, end_idx)
+        raw_keys=slice_func(raw_keys, start_idx, end_idx)
         print(raw_keys)

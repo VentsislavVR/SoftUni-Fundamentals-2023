@@ -1,11 +1,9 @@
-# import re
-# def check_groups(barcode):
-#     group = re.findall(r"\d+", barcode)
-#     digits = [int(x) for x in group]
-#     if digits:
-#         return print(f"Product group: {digits}")
-#     return print(f"Product group: 00")
-#
-# bar = int
-# barcode = input()
-# check_groups(barcode)
+
+def reversed_numbers(numbers):
+    numbers.reverse()
+    print(numbers)
+
+
+numbers = input().split()
+
+numbers=reversed_numbers(numbers)
