@@ -16,7 +16,7 @@ while clothes:
 print(racks_count)
 
 
-# fail
+# fail in this solution im filing the empty space 
 # box_of_clothes = deque([int(x) for x in input().split()])
 #
 # rack_capacity = int(input())
