@@ -10,7 +10,8 @@ for stud in range(num):
     students[student].append(grade)
 
 for name, grades in students.items():
-    avg = mean(grades)
+    # avg = mean(grades)
+    avg = sum(grades) / len(grades)
 
     print(f"{name} -> {' '.join(str(f'{grade:.2f}') for grade in grades)} (avg: {avg:.2f})")
 
