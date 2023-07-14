@@ -1,27 +1,23 @@
 #revised
 # n = int(input())
-
+#
 # final_max = set()
 # for i in range(n):
 #     intersection = input().split("-")
-#     first = intersection[0]
-#     second = intersection[1]
-#     fstart = first.split(",")
-#     sstart = second.split(',')
-#     first_start = int(fstart[0])
-#     first_end = int(fstart[1])
-#     second_start = int(sstart[0])
-#     second_end = int(sstart[1])
+#     first, second = intersection[0], intersection[1]
+#     fstart, sstart = first.split(","), second.split(',')
+#     first_start, first_end = int(fstart[0]), int(fstart[1])
+#     second_start, second_end = int(sstart[0]), int(sstart[1])
 #
 #     first_set = set(range(first_start, first_end + 1))
 #     second_set = set(range(second_start, second_end + 1))
-#
 #     current_max = first_set.intersection(second_set)
 #
 #     if len(current_max) > len(final_max):
 #         final_max = current_max
 #
 # print(f"Longest intersection is [{', '.join(str(x) for x in final_max)}] with length {len(final_max)}")
+
 
 # bad max logic
 
