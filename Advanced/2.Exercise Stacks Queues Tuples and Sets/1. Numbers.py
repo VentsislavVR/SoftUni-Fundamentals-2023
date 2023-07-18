@@ -1,9 +1,9 @@
-#1.0 EZ
+# 1.0 EZ
 first = set(int(x) for x in input().split())
 second = set(int(x) for x in input().split())
 
 for _ in range(int(input())):
-    first_command,second_command, *data = input().split()
+    first_command, second_command, *data = input().split()
 
     command = first_command + " " + second_command
 
