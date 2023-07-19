@@ -1,7 +1,8 @@
 row,cols = [int(el) for el in input().split()]
 
-matrix = [[j for j in input().split()] for i in range(row)]
-
+# matrix = [[j for j in input().split()] for i in range(row)]
+matrix = [input().split() for row in range(row)]
+# dont need the top ,working with string only
 matching = 0
 for i in range(row-1):
     for j in range(cols-1):
