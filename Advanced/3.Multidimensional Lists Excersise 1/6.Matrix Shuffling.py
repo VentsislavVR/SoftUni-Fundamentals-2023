@@ -1,5 +1,8 @@
 def check_valid_indices(indices):
-    return {indices[0], indices[2]}.issubset(valid_rows) and {indices[1], indices[3]}.issubset(valid_cols)
+    if {indices[0], indices[2]}.issubset(valid_rows) and {indices[1], indices[3]}.issubset(valid_cols):
+        return True
+
+    return False
 
 
 def swap_command(command, indices):
