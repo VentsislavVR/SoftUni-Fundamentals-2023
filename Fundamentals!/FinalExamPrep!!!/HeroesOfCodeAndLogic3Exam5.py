@@ -2,8 +2,7 @@ def cast_spell_func(hero_name, needed_magic_power, spell_name, data):
     # the hero casts a spell reducing the mp
     if data[hero_name][1] >= needed_magic_power:
         data[hero_name][1] -= needed_magic_power
-        print(
-            f"{hero_name} has successfully cast {spell_name} and now has {data[hero_name][1]} MP!")
+        print(f"{hero_name} has successfully cast {spell_name} and now has {data[hero_name][1]} MP!")
     else:
         print(f"{hero_name} does not have enough MP to cast {spell_name}!")
 
