@@ -1,5 +1,10 @@
-def multiply(*data):
-    result = data[0] * data[1] * data[2]
+def multiply(*args):
+    result = 1
+    for num in args:
+        result *= num
     return result
-data = 1,4,5
-print(multiply(*data))
+
+
+print(multiply(1, 4, 5))
+print(multiply(4, 5, 6, 1, 3))
+print(multiply(2, 0, 1000, 5000))
