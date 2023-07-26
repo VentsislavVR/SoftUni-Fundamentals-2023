@@ -4,8 +4,8 @@ import openai
 import tkinter as tk
 from PIL import Image, ImageTk
 
-openai.api_key = "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" # hard limit
-# "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" hard limit
+openai.api_key = "your api key"
+
 
 
 def display_image(image_url):
@@ -34,10 +34,14 @@ def get_image_url():
 
 
 def render_image():
-    image_url = get_image_url()
-
-
-    display_image(image_url)
+    try:
+        image_url = get_image_url()
+        input_field.delete(0, tk.END)
+    except openai.error.InvalidRequestError:
+        error_label = tk.Label(window,text="Prompt cannot be empty!",fg="red")
+        error_label.place(x=175,y=50)
+    else:
+        display_image(image_url)
 
 
 window = tk.Tk()
