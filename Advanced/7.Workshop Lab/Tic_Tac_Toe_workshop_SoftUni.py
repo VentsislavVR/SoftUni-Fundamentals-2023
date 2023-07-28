@@ -71,8 +71,8 @@ def print_board(begin=False):
 
 
 def start():
-    figlet = Figlet(font="isometric2") # big font / isometrik 1 2 33 4
-    print(figlet.renderText("!.! TiK-TaK-ToE !.!"))
+    figlet = Figlet(font="broadway") # big font / isometrik 1,2,3,4/ speed / broadway,starwars
+    print(figlet.renderText("TiK- TaK- ToE !.!"))
 
     player_one_name = get_name("one")
     player_two_name = get_name("two")

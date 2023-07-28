@@ -17,7 +17,7 @@ def save_extensions(dir_name):
 
 directory = input()
 
-extensions = {}  # {.py:[example.py,example2.py],......}
+extensions = {}  # {.py:[__init__.py,example2.py],......}
 result = []
 save_extensions(directory)
 # print(extensions)
