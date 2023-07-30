@@ -1,4 +1,5 @@
 from collections import deque
+
 #  solution 1
 # numbers = deque(input().split())
 #
