@@ -1,10 +1,11 @@
-from user import User
+from project.user import User
+
 from typing import List, Dict
 
 
 class Library:
     def __init__(self):
-        self.user_record: List[User] = []
+        self.user_records: List[User] = []
         self.books_available: Dict[str:List[str]] = {}  # {"D.K.A":[book1,book,2....]}
         self.rented_books: Dict[str:Dict[str:int]] = {}  # {Pesho:{Python for pros : 30,....},,,,} }
 
