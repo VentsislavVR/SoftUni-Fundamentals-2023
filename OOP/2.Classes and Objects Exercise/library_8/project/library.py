@@ -1,4 +1,4 @@
-from project.user import User
+from person_1.project import User
 
 from typing import List, Dict
 
