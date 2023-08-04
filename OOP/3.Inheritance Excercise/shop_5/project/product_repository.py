@@ -1,6 +1,6 @@
-from project.drink import Drink
-from project.food import Food
-from project.product import Product
+from drink import Drink
+from food import Food
+from product import Product
 from typing import List, Optional
 
 
