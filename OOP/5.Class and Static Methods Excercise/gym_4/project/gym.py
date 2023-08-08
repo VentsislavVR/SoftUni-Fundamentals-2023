@@ -42,6 +42,6 @@ class Gym:
         plan = [p for p in self.plans if p.id == subscription.exercise_id][0]
         equipment = [e for e in self.equipment if e.id == plan.equipment_id][0]
 
-        return f"{subscription}\n{customer}\n{trainer}\n{equipment}\n{plan}\n"
 
+        return f"{subscription}\n{customer}\n{trainer}\n{equipment}\n{plan}\n"
 
