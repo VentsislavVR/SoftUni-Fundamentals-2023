@@ -1,6 +1,6 @@
 from typing import List
 
-from project.room import Room
+from room import Room
 
 
 class Hotel:
