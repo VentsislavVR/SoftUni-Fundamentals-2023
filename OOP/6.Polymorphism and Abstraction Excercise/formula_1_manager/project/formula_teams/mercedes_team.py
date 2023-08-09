@@ -1,12 +1,10 @@
 from typing import Dict
-
-from formula_teams.formula_team import FormulaTeam
-
+from formula_team import FormulaTeam
 
 class MercedesTeam(FormulaTeam):
 
     @property
-    def sponsors(self):
+    def sponsors(self)->Dict[str,Dict[int,int]]:
         return {
             "Petronas": {
                 1: 1_000_000,

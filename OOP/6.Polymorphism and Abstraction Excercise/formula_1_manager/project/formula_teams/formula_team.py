@@ -8,7 +8,7 @@ class FormulaTeam(ABC):
 
     @property
     @abstractmethod
-    def sponsors(self):
+    def sponsors(self)->Dict[str,Dict[int,int]]:
         ...
 
     @property

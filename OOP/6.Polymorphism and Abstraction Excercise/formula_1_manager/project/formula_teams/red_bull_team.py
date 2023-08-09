@@ -6,7 +6,7 @@ from formula_team import FormulaTeam
 class RedBullTeam(FormulaTeam):
 
     @property
-    def sponsors(self):
+    def sponsors(self)-> Dict[str,Dict[int,int]]:
         return {
             "Oracle": {
                 1: 1_500_000,
