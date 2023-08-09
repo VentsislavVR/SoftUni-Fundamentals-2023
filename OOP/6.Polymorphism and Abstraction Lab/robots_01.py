@@ -34,7 +34,12 @@ da_vinci = MedicalRobot('Da Vinci')
 moley = ChefRobot('Moley')
 griffin = WarRobot('Griffin')
 
-number_of_robot_sensors(basic_robot)
-number_of_robot_sensors(da_vinci)
-number_of_robot_sensors(moley)
-number_of_robot_sensors(griffin)
+# number_of_robot_sensors(basic_robot)
+# number_of_robot_sensors(da_vinci)
+# number_of_robot_sensors(moley)
+# number_of_robot_sensors(griffin)
+
+robs = [basic_robot,da_vinci,moley,griffin]
+
+for r in robs:
+    print(r.sensors_amount())
