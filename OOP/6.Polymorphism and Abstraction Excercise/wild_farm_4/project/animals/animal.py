@@ -13,26 +13,26 @@ class Animal(ABC):
 
     @property
     @abstractmethod
-    def make_sound(self) -> str:
-        ...
-
-    @property
-    @abstractmethod
-    def feed(self):
-        ...
-
-    @property
-    @abstractmethod
-    def gain_weight(self) -> float:
-        ...
-
-    @property
-    @abstractmethod
     def food_that_eats(self) -> List[Food]:
         ...
 
+    @property
+    @abstractmethod
+    def gained_weight(self) -> float:
+        ...
 
-class Bird(ABC, Animal):
+    @abstractmethod
+    def make_sound(self) -> str:
+        ...
+
+    def feed(self, food: Food) -> None or str:
+        if type(food) not in self.food_that_eats:
+            return f"{self.__class__.__name__} does not eat {food.__class__.__name__}!"
+        self.weight += food.quantity * self.gained_weight
+        self.food_eaten += food.quantity
+
+
+class Bird(Animal,ABC):
     def __init__(self, name: str, weight: float, wing_size: float):
         super().__init__(name, weight)
         self.wing_size = wing_size
@@ -45,7 +45,7 @@ class Bird(ABC, Animal):
                 f"{self.food_eaten}]")
 
 
-class Mammel(ABC, Animal):
+class Mammal(Animal,ABC):
     def __init__(self, name: str, weight: float, living_region: float):
         super().__init__(name, weight)
         self.living_region = living_region
