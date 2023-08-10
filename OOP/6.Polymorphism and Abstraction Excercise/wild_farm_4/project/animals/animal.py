@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List
-
-from project.food import Food
+from food import Food
 
 
 class Animal(ABC):
@@ -32,7 +31,7 @@ class Animal(ABC):
         self.food_eaten += food.quantity
 
 
-class Bird(Animal,ABC):
+class Bird(Animal, ABC):
     def __init__(self, name: str, weight: float, wing_size: float):
         super().__init__(name, weight)
         self.wing_size = wing_size
@@ -45,7 +44,7 @@ class Bird(Animal,ABC):
                 f"{self.food_eaten}]")
 
 
-class Mammal(Animal,ABC):
+class Mammal(Animal, ABC):
     def __init__(self, name: str, weight: float, living_region: float):
         super().__init__(name, weight)
         self.living_region = living_region
